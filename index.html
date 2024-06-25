@@ -16,13 +16,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link rel="icon" type="image/jpg" href="src/img/icon.jpg">
+    <link rel="icon" type="image/jpg" href="src/img/icon.jpg">
 
 </head>
 
 <body>
     <div id="loader" class="center" style="z-index: 10000;"></div>
-    <header class="header">
+    <header class="header sticky-top">
         <div class="container" style="border-bottom: 1px solid #c0c0c0;">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand logo" href="#">Be̅hance</a>
@@ -60,10 +60,13 @@
                                 Hire Freelancers
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#"><i class="fa fa-info-circle"></i> Hiring on Behance</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-info-circle"></i> Hiring on
+                                    Behance</a>
                                 <a class="dropdown-item" href="#"><i class="fa fa-search"></i> Find Creatives</a>
-                                <a class="dropdown-item" href="#"><i class="fa fa-address-book-o"></i> My Freelance Projects</a>
-                                <a class="dropdown-item" href="#"><i class="fa fa-plus-circle"></i> New Freelance Project</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-address-book-o"></i> My Freelance
+                                    Projects</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-plus-circle"></i> New Freelance
+                                    Project</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item small" href="#">Graphic Designers</a>
                                 <a class="dropdown-item small" href="#">Brand Designers</a>
@@ -79,41 +82,47 @@
                             <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
                         </li>
                         <li class="nav-item mx-2">
-                            <button class="btn btn-outline-primary my-2 my-sm-0 btn-custom-rounded font-weight-bold" type="button">Log In</button>
+                            <button class="btn btn-outline-primary my-2 my-sm-0 btn-custom-rounded font-weight-bold"
+                                type="button">Log In</button>
                         </li>
                         <span> </span>
                         <li class="nav-item">
-                            <button class="btn btn-primary my-2 my-sm-0 btn-custom-rounded font-weight-bold" type="button">Sign Up</button>
+                            <button class="btn btn-primary my-2 my-sm-0 btn-custom-rounded font-weight-bold"
+                                type="button">Sign Up</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold" href="#"><img src="./src/img/adobelogo.png" width="20" height="20"> Adobe</a>
+                            <a class="nav-link font-weight-bold" href="#"><img src="./src/img/adobelogo.png" width="20"
+                                    height="20"> Adobe</a>
                         </li>
                     </ul>
-                    
+
                 </div>
             </nav>
         </div>
     </header>
 
     <div class="container pader mt-3 mb-4"> <!-- mt-5 pt-5-->
-        <div class="row"style="border-bottom: 1px solid #c0c0c0;">
+        <div class="row" style="border-bottom: 1px solid #c0c0c0;">
             <div class="col-md-2 mx-auto mb-3">
-                <button class="btn btn-outline-secondary w-75 btn-custom-rounded"><img class="filter-img" src="src/img/filtericon.png"
-                        width="20" height="20"> Filter</button>
+                <button class="btn btn-outline-secondary w-100 btn-custom-rounded">
+                    <img class="filter-img" src="src/img/filtericon.png" width="20" height="20"> Filter
+                </button>
             </div>
             <div class="col-md-7 mb-3">
                 <div class="input-group">
+                    <button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
                     <input type="text" class="form-control" placeholder="Search the creative world at work"
                         id="searchInput" oninput="showSuggestions(this.value)">
                     <div class="input-group-append btn-custom-rounded">
-                        <button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
-                        <button class="btn btn-outline-secondary" type="button"><i class="fa fa-image"></i> Search by
-                            Image</button>
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-image"></i>
+                            <span class="hide-on-small-screen">Search by Image</span>
+                        </button>
                     </div>
                 </div>
                 <div id="suggestions" class="suggestions-list"></div>
             </div>
-            <div class="col-md-offset-3 mx-auto mb-3 ">
+            <div class="col-md-offset-3 mx-auto mb-3">
                 <select class="btn-custom-rounded form-control" id="sortOptions" onchange="sortImages()">
                     <option value="recommended">Recommended</option>
                     <option value="likes">Most Liked</option>
@@ -121,7 +130,6 @@
                 </select>
             </div>
         </div>
-
         <div class="container mt-1 pt-5">
             <div class="row" id="imageGallery">
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
@@ -129,6 +137,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic1.jpg" alt="Sample Image 1" width="100%" height="200px">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Naruto & Boruto</h4>
                             <p>Maapa .Inc<span class="pro-badge">PRO</span></p>
@@ -148,6 +161,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic2.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>CuberPunk 2077 Night Out</h4>
                             <p>Unreal Devs</p>
@@ -167,6 +185,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic3.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Vintage Old Street</h4>
                             <p>Richard Stevens</p>
@@ -186,6 +209,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic4.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Lofi Night Girl Chilling</h4>
                             <p>Cassy Cage</p>
@@ -205,6 +233,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic5.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Ghost of Tsushima Tree</h4>
                             <p>Nixxes .Inc</p>
@@ -224,9 +257,14 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic6.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Interstellar Black Hole Space</h4>
-                            <p>Warner Bros</p>
+                            <p>Warner Bros <span class="pro-badge">PRO</span></p>
                             <div class="stats">
                                 <div class="likes">
                                     <i class="fa fa-thumbs-up"></i> 1795
@@ -243,6 +281,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic7.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Sunset Neon City</h4>
                             <p>Epic .Inc</p>
@@ -262,6 +305,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic8.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Interstellar Outer Space</h4>
                             <p>Warner Bros</p>
@@ -281,6 +329,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic9.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Bullet Train Movie Tokyo City</h4>
                             <p>Sony Pictures Entertainment<span class="pro-badge">PRO</span></p>
@@ -300,6 +353,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic10.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Himalayan Mountain Sunset</h4>
                             <p>Richard Stevens</p>
@@ -319,6 +377,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic11.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>Ghost of Tsushima Intro Pic</h4>
                             <p>Nixxes .Inc</p>
@@ -338,6 +401,11 @@
                         <div class="thumbnail-img">
                             <img src="src/img/pic12.jpg" alt="Thumbnail Image" width="100%">
                         </div>
+
+                        <div class="save-button">
+                            <i class="fa fa-folder-open"></i> Save
+                        </div>
+
                         <div class="thumbnail-info">
                             <h4>The Amazing Spider-Man</h4>
                             <p>Marvel .Inc</p>
@@ -364,16 +432,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="src/script.js"></script>
+
 </body>
-    <style>
-        #loader {
+<style>
+    #loader {
         border: 12px solid #f3f3f3;
         border-radius: 50%;
         border-top: 12px solid #444444;
         width: 70px;
         height: 70px;
         animation: spin 1s linear infinite;
-        z-index: 10000;
     }
 
     .center {
@@ -390,5 +458,6 @@
             transform: rotate(360deg);
         }
     }
-    </style>
+</style>
+
 </html>

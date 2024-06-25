@@ -27,22 +27,22 @@ window.addEventListener('load', sortImages);
 // Call sortImages when the sort option changes
 document.getElementById('sortOptions').addEventListener('change', sortImages);
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById('searchInput');
     const searchByImageBtn = document.getElementById('searchByImage');
     const thumbnails = document.querySelectorAll('.thumbnail');
     const suggestions = document.getElementById('suggestions');
 
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         showSuggestions(searchInput.value);
     });
 
-    searchByImageBtn.addEventListener('click', function() {
+    searchByImageBtn.addEventListener('click', function () {
         showImageSuggestions(searchInput.value);
     });
 
     function showSuggestions(value) {
-        
+
         const searchInput = value.toLowerCase();
         const images = Array.from(document.getElementsByClassName('thumbnail'));
         const titles = images.map(image => image.querySelector('.thumbnail-info h4').innerText.toLowerCase());
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById('searchInput').value = title;
                     suggestions.innerHTML = '';
                     // Display only the selected image
-                    
+
                     images.forEach(image => {
                         const imageTitle = image.querySelector('.thumbnail-info h4').innerText.toLowerCase();
                         if (imageTitle === title) {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
                 };
                 suggestions.appendChild(suggestionItem);
-                
+
             });
         } else {
             // If the search input is empty, display all images
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function showImageSuggestions(value) {
-        
+
         const searchInput = value.toLowerCase();
         const images = Array.from(document.getElementsByClassName('thumbnail'));
         suggestions.innerHTML = '';
